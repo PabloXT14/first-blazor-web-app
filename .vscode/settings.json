@@ -1,0 +1,8 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "razor": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}

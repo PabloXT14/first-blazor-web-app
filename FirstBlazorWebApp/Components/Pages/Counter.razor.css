@@ -25,3 +25,10 @@
     border: 1px solid #ccc;
     border-radius: 8px;
 }
+
+button {
+    background-color: #f82b2b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+}

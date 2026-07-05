@@ -6,3 +6,5 @@ riderModule.iml
 
 # Rider IDE
 .idea/
+
+node_modules/
