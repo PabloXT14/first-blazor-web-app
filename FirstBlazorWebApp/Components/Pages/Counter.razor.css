@@ -1,0 +1,27 @@
+.box {
+    min-width: 100%;
+    min-height: 3rem;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.box-container {
+    min-width: 100%;
+    min-height: 3rem;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
