@@ -1,5 +1,7 @@
 ﻿@page "/"
 
+@rendermode InteractiveServer
+
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
@@ -14,5 +16,46 @@ Welcome to your new app.
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Click me
     </button>
+
+    @* BIND *@
+    @* <input
+        type="text"
+        @bind="inputValue"
+        class="border border-gray-300 rounded py-2 px-3"
+        placeholder="Enter text..."
+    /> *@
+
+    @* EVENT BIND *@
+    @* <input
+        type="text"
+        @bind="inputValue"
+        @bind:event="oninput"
+        class="border border-gray-300 rounded py-2 px-3"
+        placeholder="Enter text..."
+    /> *@
+
+    EXECUTE CODE AFTER THE BIND HAS BEEN UPDATED
+    <input
+        type="text"
+        @bind="inputValue"
+        @bind:event="oninput"
+        @bind:after="Search"
+        class="border border-gray-300 rounded py-2 px-3"
+        placeholder="Enter text..."
+    />
+    <p>You entered: @inputValue</p>
+    <p>Search result: @result</p>
 </div>
 
+
+@code {
+    string inputValue = string.Empty;
+    string result = string.Empty;
+
+    async Task Search()
+    {
+        // Simulate a search operation
+        await Task.Delay(500); // Simulate a delay for the search operation
+        result = $"You searched for: {inputValue}";
+    }
+}
